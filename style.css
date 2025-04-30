@@ -394,56 +394,6 @@ h1 {
     .info-content h2, span {
         color: #000000; 
     }
-    
-    .info-circle {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 325px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-
-    .circle-txt {
-        text-align: center;
-        width: 25%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 10px;
-    }
-
-    .circle-1 {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        border: 3px solid #ffffff;
-        background-color: transparent;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: relative;
-    }
-
-    .circle-1 h3 {
-        font-size: 22px;
-        color: #ebebeb;
-        margin: 0;
-        width:100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .circle-txt p {
-        color: #fffdfc;
-        margin-top: 15px;
-        font-size: 14px;
-    }
 
     .info-2 {
         padding: 360px 0;
@@ -453,41 +403,82 @@ h1 {
         background-size: auto;
     }
 
-    .testi {
-        display: flex;
-        align-items: center;
-        text-align: left;
-        margin-top: 35px;
+    .stats-title {
+        background-color: #ffffff;
+        padding: 0px 20px 40px;
+        margin-top: -35px;
+        text-align: center;
     }
 
-    .testi-left {
-        width: 50%;
-        padding-right: 25px;
-    }
-
-    .testi-right {
-        width: 50%;
-        padding-left: 25px;
-    }
-
-    .testi-txt {
-        margin-bottom: 25px;
-    }
-
-    .testi-txt ing {
-        width: 50px;
-        margin-bottom: 15px;
-    }
-
-    .testi-txt h3 {
-        font-size: 20px;
+    .stats-title h2 {
+        font-size: 40px;
+        font-weight: bold;
+        margin: 0;
         color: #000000;
     }
 
-    .testi-txt p {
-        font-size: 16px;
-        color: #000000
-    }
+    .stats-section {
+        background-image: url(img\ title/img-20250422-wa0068.jpg);
+        background-size: cover;
+        background-position: center 0%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding: 120px 20px;
+        text-align: center;
+        color: #fffdfc;
+        position: relative;
+        z-index: 1;
+      }
+      
+      .stats-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 40px;
+        position: relative;
+        z-index: 2;
+      }
+      
+      .stat-circle {
+        width: 140px;
+        position: relative;
+        text-align: center;
+      }
+      
+      .stat-circle svg {
+        width: 120px;
+        height: 120px;
+        transform: rotate(-90deg);
+      }
+      
+      .stat-circle circle {
+        fill: none;
+        stroke-width: 10;
+        r: 50;
+        cx: 60;
+        cy: 60;
+      }
+      
+      .stat-circle circle:first-child {
+        stroke: #e6e6e6;
+      }
+      
+      .stat-circle circle.progress {
+        stroke: #21ba66;
+        stroke-dasharray: 314;
+        stroke-dashoffset: 314;
+        transition: stroke-dashoffset 1s linear;
+      }
+      
+      .stat-circle .percentage {
+        position: absolute;
+        top: 42px;
+        left: 0;
+        right: 0;
+        font-size: 20px;
+        font-weight: bold;
+      } 
+        
 
     .form {
         margin-top: 35px;
@@ -1010,6 +1001,55 @@ h1 {
             margin-right: 15px;
             display: inline-block;
         }
+        
+        .floating-email-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 999;
+            width: 56px;
+            height: 56px;
+            background-color: #21ba66;
+            color: #fff;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 28px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease; box-shadow: 0.3s ease;
+        }
+
+        .floating-email-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+        }
+
+        .floating-whatsapp-button {
+            position: fixed;
+            bottom: 90px;
+            left: 20px;
+            z-index: 999;
+            width: 56px;
+            height: 56px;
+            background-color: #25D366;
+            color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            text-decoration: none;
+            transition: transform 0.3s ease; box-shadow: 0.3s ease;
+        }
+
+        .floating-whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+        }
+
             
 
 
